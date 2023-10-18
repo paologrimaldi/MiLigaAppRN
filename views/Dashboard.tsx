@@ -7,6 +7,7 @@ import Noticias from './Noticias';
 import BuscarJugadores from './Buscar_Jugadores';
 import Chats from './Chats';
 import Icon6 from 'react-native-vector-icons/FontAwesome6';
+import {Home, Messages, Profile} from './ChatUI/screens';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -39,7 +40,7 @@ function Dashboard() {
       />
       <Tab.Screen
         name="Buscar"
-        component={BuscarJugadores}
+        component={Home}
         options={{
           tabBarLabel: 'Buscar',
           tabBarIcon: ({color}) => (
@@ -49,7 +50,7 @@ function Dashboard() {
       />
       <Tab.Screen
         name="Chats"
-        component={Chats}
+        component={Messages}
         options={{
           tabBarLabel: 'Chats',
           tabBarIcon: ({color}) => (

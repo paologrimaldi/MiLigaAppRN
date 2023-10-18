@@ -8,13 +8,16 @@ import {GluestackUIProvider} from '@gluestack-ui/themed';
 import {config} from '@gluestack-ui/config';
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
+import {PaperProvider} from 'react-native-paper';
 
 const upTaskApp = () => (
   <ApolloProvider client={client}>
     <GluestackUIProvider config={config}>
-      <NavigationContainer>
-        <App />
-      </NavigationContainer>
+      <PaperProvider>
+        <NavigationContainer>
+          <App />
+        </NavigationContainer>
+      </PaperProvider>
     </GluestackUIProvider>
   </ApolloProvider>
 );
